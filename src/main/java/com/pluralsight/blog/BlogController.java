@@ -37,4 +37,8 @@ public class BlogController {
         modelMap.put("post", post);
         return "post-details";
     }
+
+    public String categoryList(@PathVariable Long id, ModelMap modelMap) {
+        return "category-list";
+    }
 }
