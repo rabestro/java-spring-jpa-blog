@@ -12,6 +12,8 @@ public class Post {
     private Long id;
     private String title;
     private String lead;
+    @Lob
+    @Column(length=1000000)
     private String body;
     private String author;
     private Date date;
