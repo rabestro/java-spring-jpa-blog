@@ -2,6 +2,7 @@ package com.pluralsight.blog;
 
 import com.pluralsight.blog.data.CategoryRepository;
 import com.pluralsight.blog.data.PostRepository;
+import com.pluralsight.blog.model.Category;
 import com.pluralsight.blog.model.Post;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -24,7 +25,9 @@ public class BlogController {
     @RequestMapping("/")
     public String listPosts(ModelMap modelMap) {
         List<Post> posts = postRepository.findAll();
+        List<Category> categories = categoryRepository.findAll();
         modelMap.put("posts", posts);
+        modelMap.put("categories", categories);
         return "home";
     }
 
