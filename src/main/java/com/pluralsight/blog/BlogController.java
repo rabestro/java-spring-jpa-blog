@@ -38,6 +38,7 @@ public class BlogController {
         return "post-details";
     }
 
+    @RequestMapping("/category/{id}")
     public String categoryList(@PathVariable Long id, ModelMap modelMap) {
         return "category-list";
     }
